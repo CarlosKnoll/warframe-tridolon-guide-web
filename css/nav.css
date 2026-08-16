@@ -1,0 +1,55 @@
+/* nav.css — top navigation shared by every page */
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--space-6);
+}
+
+.site-nav {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: var(--space-4) 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.site-nav__brand {
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.05rem;
+  margin-right: auto;
+  white-space: nowrap;
+}
+
+.site-nav__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav__links a {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.92rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.site-nav__links a:hover {
+  background: var(--panel-alt);
+  color: var(--text);
+}
+
+.site-nav__links a[aria-current="page"] {
+  background: var(--panel);
+  color: var(--accent);
+  font-weight: 600;
+}

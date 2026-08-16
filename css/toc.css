@@ -1,0 +1,99 @@
+/* Hovering table-of-contents widget.
+   Auto-built from every <h2> on the page by js/tocWidget.js.
+   Sits top-left, dots in a fixed-width column so they line up in a
+   straight vertical line regardless of label length. Labels are always
+   faintly visible and fade up to full opacity on hover/active, rather
+   than popping in/out. */
+
+/* Keeps a smooth-scrolled-to heading from landing flush under a sticky
+   header. Harmless if your header isn't sticky. Adjust to match its
+   actual height if you have one. */
+main h2 {
+  scroll-margin-top: 5rem;
+}
+
+.toc-widget {
+  position: fixed;
+  top: 7rem;
+  left: 1.5rem;
+  z-index: 40;
+  max-width: 14rem;
+}
+
+.toc-widget__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  /* indent column + dot column + label column: h2 dots sit in the dot
+     column, h3 dots shift one column right (the indent column), so both
+     levels line up in their own straight vertical rule regardless of
+     label length. */
+  grid-template-columns: 0.7rem 0.9rem 1fr;
+  row-gap: 0.55rem;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+
+/* Lift <li> and <a> out of the way so the dot/label spans become the
+   actual grid cells — this is what keeps every dot in its column. */
+.toc-widget__list li {
+  display: contents;
+}
+
+.toc-widget__link {
+  display: contents;
+  text-decoration: none;
+  color: inherit;
+}
+
+.toc-widget__dot {
+  grid-column: 2;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.35;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.toc-widget__item--h3 .toc-widget__dot {
+  grid-column: 2;
+  width: 5px;
+  height: 5px;
+  justify-self: end;
+}
+
+.toc-widget__label {
+  grid-column: 3;
+  font-size: 0.85rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+}
+
+.toc-widget__item--h3 .toc-widget__label {
+  font-size: 0.75rem;
+  padding-left: 0.35rem;
+}
+
+.toc-widget__link:hover .toc-widget__dot,
+.toc-widget__link.is-active .toc-widget__dot {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.toc-widget__link:hover .toc-widget__label,
+.toc-widget__link.is-active .toc-widget__label {
+  opacity: 1;
+}
+
+/* Hide on narrow screens — not enough side margin for a floating widget */
+@media (max-width: 900px) {
+  .toc-widget {
+    display: none;
+  }
+}

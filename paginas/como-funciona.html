@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como funciona? — Guia de Eidolons</title>
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/nav.css">
+<link rel="stylesheet" href="../css/cycle-widget.css">
+<link rel="stylesheet" href="../css/gallery.css">
+<link rel="stylesheet" href="../css/toc.css">
+<link rel="stylesheet" href="../css/lightbox.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="site-nav">
+    <a class="site-nav__brand" href="../index.html">Guia de Eidolons</a>
+    <ul class="site-nav__links">
+      <li><a href="../index.html">Início</a></li>
+      <li><a href="como-funciona.html" aria-current="page">Como funciona?</a></li>
+      <li><a href="equipamentos.html">Equipamentos</a></li>
+      <li><a href="modo-iniciante.html">Modo Iniciante</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <h1>Como funciona?</h1>
+  <p class="subtitle">Informações sobre conceitos e mecânicas do embate contra Eidolons nas Planícies de Eidolon.</p>
+
+  <h2>Rotação</h2>
+  <p>Os eidolons nascem nas Planícies de Eidolon somente durante a noite no jogo, em uma rotação fixa em tempo real.</p>
+
+  <!-- Live day/night cycle widget. Logic lives in js/cycleWidget.js -->
+  <div id="cycle-widget">
+    <div class="cycle-card" data-cycle="cetusCycle">
+      <div class="loc">Planícies de Eidolon</div>
+      <div class="state">…</div>
+      <div class="timer">--:--</div>
+    </div>
+  </div>
+
+  <h2>Tridolons</h2>
+  <p>É chamado de Tridolon a sequência de capturar os três Eidolons existentes nas Planícies de Eidolon.</p>
+
+  <div class="galery" style="--galery-cols: 3;">
+    <figure class="galery__item">
+      <img class="galery__img" src="../images/ArticulaTeralyst.png" alt="Eidolon Teralista">
+      <figcaption class="galery__caption">Eidolon Teralista</figcaption>
+    </figure>
+    <figure class="galery__item">
+      <img class="galery__img" src="../images/ArticulaGantulyst.png" alt="Eidolon Gantulista">
+      <figcaption class="galery__caption">Eidolon Gantulista</figcaption>
+    </figure>
+    <figure class="galery__item">
+      <img class="galery__img" src="../images/ArticulaHydrolyst.png" alt="Eidolon Hidrolista">
+      <figcaption class="galery__caption">Eidolon Hidrolista</figcaption>
+    </figure>
+  </div>
+
+
+  <p>Durante o período noturno nas Planícies, o Teralista aparece naturalmente. Ao acessar as planícies, imediatamente monte em sua Archwing e voe para o alto, olhando em volta para encontrar o ponto de nascimento do Teralista, que pode ser encontrado ao identificar um brilho azul e também por seu barulho.</p>
+  <img src="../images/20260816103446_1.jpg" alt="Nascimento do Eidolon Teralista">
+
+  <p>A luta contra Eidolons é simples, porém requer atenção. Ao nascer, os Eidolons estarão invulneráveis a dano padrão, pois estão protegidos por um escudo que só pode ser destruído por dano da Amp do operador.</p>
+  <img src="../images/20260816105609_1.jpg" alt="Escudo do Eidolon Teralista">
+
+  <p>Desta forma, o primeiro passo na luta contra um Eidolon é usar o operador para remover o escudo. Após o escudo ser removido, o Eidolon se torna vulnerável a dano padrão, porém apenas em seus pontos fracos, chamados Sinóvias.</p>
+  <img src="../images/20260816105835_1.jpg" alt="Escudo do Eidolon Teralista">
+
+  <p>O Eidolon Teralista contém 4 sinóvias a serem destruídas, localizadas em seus "joelhos e cotovelos". Já o Eidolon Gantulista e o Eidolon Hidrolista possuem 6 sinóvias cada, com duas sinóvias em "suas costas" adicionais.</p>
+
+  <div class="galery" style="--galery-cols: 3; --galery-ratio: 16 / 9;">
+    <figure class="galery__item">
+      <img class="galery__img" src="../images/TeraSynovia.png" alt="Sinóvias do Eidolon Teralista">
+      <figcaption class="galery__caption">Sinóvias do Eidolon Teralista</figcaption>
+    </figure>
+    <figure class="galery__item">
+      <img class="galery__img" src="../images/GantuSynovia.png" alt="Sinóvias do Eidolon Gantulista">
+      <figcaption class="galery__caption">Sinóvias do Eidolon Gantulista</figcaption>
+    </figure>
+    <figure class="galery__item">
+      <img class="galery__img" src="../images/HydroSynovia.png" alt="Sinóvias do Eidolon Hidrolista">
+      <figcaption class="galery__caption">Sinóvias Eidolon Hidrolista</figcaption>
+    </figure>
+  </div>
+
+  <p>Após destruir todas as sinóvias, o Eidolon é derrubado, enquanto chama por Eidolon Vonvalistas. Após alguns segundos deitado, o Eidolon levanta uma última vez, onde pode ser derrotado e eliminado ou capturado.</p>
+  <img src="../images/vlcsnap-2026-08-16-12h26m21s791.png" alt="Eidolon Teralista após derrubado">
+
+  <h2>Eliminação vs. Captura</h2>
+  <p>Existem dois métodos para lidar com os Eidolons: Eliminar ou capturar. De forma geral, a captura é mais vantajosa. As recompensas variam de acordo com o método escolhido, mas mais importante, a captura recompensa o jogador com o recurso <strong>NECESSÁRIO</strong> para invocação dos Eidolons subsequentes. Ou seja: Eliminar um Eidolon encerra o ciclo.</p>
+  <p>Para capturar um Eidolon, é necessário que todas as sinóvias destruídas estejam conectadas a uma Isca de Eidolon carregada antes da eliminação. Caso o Eidolon seja eliminado sem este requerimento, é considerado uma eliminação e não captura.</p>
+
+  <h2>Invocação de Gantulista e Hidrolista</h2>
+  <p>Os Eidolons Gantulista e Hidrolista podem ser invocados após a captura de um Eidolon anterior. Para realizar a invocação do Gantulista, é necessário utilizar um <strong>Fragmento de Eidolon (Brilhante)</strong>, obtido após a captura de um Eidolon Teralista, no Altar de Invocação presente no meio do mapa, enquanto para a invocação de um Eidolon Hidrolista, é necessário utilizar um <strong>Fragmento de Eidolon (Radiante)</strong>, obtido após a captura de um Eidolon Gantulista.</p>
+
+  <div class="galery" style="--galery-cols: 2; ">
+    <figure class="galery__item">
+      <img class="galery__img" src="../images/BrilliantEidolonShard.webp" alt="Fragmento de Eidolon (Brilhante)">
+      <figcaption class="galery__caption">Fragmento de Eidolon (Brilhante)</figcaption>
+    </figure>
+    <figure class="galery__item">
+      <img class="galery__img" src="../images/RadiantEidolonShard.png" alt="Fragmento de Eidolon (Radiante)">
+      <figcaption class="galery__caption">Fragmento de Eidolon (Radiante)</figcaption>
+    </figure>
+  </div>
+  <div class="galery" style="--galery-cols: 2; --galery-ratio: 16 / 9;">
+    <figure class="galery__item">
+      <img class="galery__img" src="../images/vlcsnap-2026-08-16-12h38m47s875.png" alt="Altar de Invocação">
+      <figcaption class="galery__caption">Altar de Invocação</figcaption>
+    </figure>
+    <figure class="galery__item">
+      <img class="galery__img" src="../images/altar.png" alt="Localização do Altar de Invocação">
+      <figcaption class="galery__caption">Localização do Altar de Invocação</figcaption>
+    </figure>
+  </div>
+
+
+  <h2>Iscas de Eidolon</h2>
+  <p>As Iscas de Eidolon são itens que permitem a captura dos Eidolons. Elas são encontradas nos diversos campos de Grineer nas planícies durante a noite.</p>
+    <div class="galery" style="--galery-cols: 1; ">
+    <figure class="galery__item">
+      <img src="../images/VomvalystLureDrone.webp" alt="Isca de Eidolon">
+      <figcaption class="galery__caption">Isca de Eidolon</figcaption>
+    </figure>
+    <figure class="galery__item">
+      <img class="galery__img" src="../images/gkymmj8j0ktz.jpg" alt="Mapa de localização das Iscas de Eidolon">
+      <figcaption class="galery__caption">Mapa de localização das Iscas de Eidolon. <a href="https://www.reddit.com/r/Warframe/comments/786qwj/eidolon_lure_map/">Fonte</a>.</figcaption>
+    </figure>
+  </div>
+  
+
+  <p>O jogador deve inicialmente destruír-las, e então hackeá-las para converter-las em Iscas aliadas. Estas iscas irão seguir o jogador que as hackeou.</p>
+  <p>Para carregá-las, o jogador deve matar Eidolon Vonvalistas nas proximidades das Iscas. Cada isca requer três Eidolon Vonvalistas para ser carregada. O jogador pode entender que a Isca está carregada quando seu ícone se tornar azul.</p>
+  <img src="../images/vlcsnap-2026-08-16-12h52m48s915.png" alt="Iscas de Eidolon não e carregada">
+
+  <p>As Iscas de Eidolon irão se ligar aos pontos de sinóvias destruídas, efetivamente permitindo a captura dos Eidolons. Cada Isca pode se ligar a dois pontos de Sinóvias. Portanto, para a captura de um Teralista são necessárias duas iscas carregadas, enquanto o Gantulista e Hidrolista precisam de três. As Iscas se conectam aos pontos de sinóvias apenas quando carregadas e dentro de uma distância de 50 metros do Eidolon.</p>
+  <img src="../images/vlcsnap-2026-08-16-12h57m02s276.png" alt="Iscas conectadas capturando o Eidolon Gantulista">
+
+  <p>Após a captura, as Iscas responsáveis pela captura conectadas ao Eidolon serão destruídas, sendo necessário converter novas iscas para a captura de outros Eidolons.</p>
+
+  <h2>Eidolon Vonvalista</h2>
+  <div class="galery" style="--galery-cols: 1; ">
+  <figure class="galery__item">
+    <img src="../images/Vomvalyst.png" alt="Eidolon Vonvalista">
+    <figcaption class="galery__caption">Eidolon Vonvalista</figcaption>
+  </figure>
+  
+  <p>Estes inimigos são encontrados ao redor das Planícies de Eidolon no período noturno. Para matar-los, o jogador pode utilizar qualquer fonte de dano, fazendo o Vonvalista assumir sua forma de energia. Neste estado, o Vonvalista só poder ser eliminado com dano de Amp do operador. Após ser eliminado, caso uma Isca de Eidolon esteja próxima, irá absorver o Vonvalista, configurando uma carga.</p>
+  <img src="../images/vlcsnap-2026-08-16-13h02m36s133.png" alt="Eidolon Vonvalista -  Forma de Energia">
+
+</main>
+
+<script type="module" src="../js/main.js"></script>
+</body>
+</html>

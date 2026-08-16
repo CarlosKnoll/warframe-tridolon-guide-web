@@ -1,0 +1,26 @@
+/* Generic content table. Add class="data-table" to any <table>. */
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse; /* merges cell borders into single lines instead of double */
+  margin: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.6rem 0.9rem;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.data-table thead th {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.35);
+  font-weight: 600;
+}
+
+/* Subtle zebra striping so long comment rows are easier to track across */
+.data-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.03);
+}

@@ -1,8 +1,16 @@
 // cycleWidget.js — drives the #cycle-widget component: fetches each cycle's
 // state/expiry from the API and renders a locally-ticking countdown.
+// UI text is in Portuguese; edit STATE_LABELS below to fix translations.
 
 import { CONFIG } from "./config.js";
 import { fetchWorldstate } from "./warframeApi.js";
+
+// Maps the API's raw state values to Portuguese display labels.
+// Unknown/new states fall back to the raw value capitalized.
+const STATE_LABELS = {
+  day: "Agora: Dia",
+  night: "Agora: Noite",
+};
 
 /**
  * Format a millisecond duration as H:MM:SS or M:SS.
@@ -16,8 +24,8 @@ function formatDuration(ms) {
   const seconds = totalSeconds % 60;
   const pad = (n) => String(n).padStart(2, "0");
   return hours > 0
-    ? `${hours}:${pad(minutes)}:${pad(seconds)}`
-    : `${minutes}:${pad(seconds)}`;
+    ? `Tempo restante: ${hours}:${pad(minutes)}:${pad(seconds)}`
+    : `Tempo restante: ${minutes}:${pad(seconds)}`;
 }
 
 class CycleCard {
@@ -38,13 +46,17 @@ class CycleCard {
       const cycleState = (data.state || "unknown").toLowerCase();
       this.expiryMs = new Date(data.expiry).getTime();
 
-      this.stateEl.textContent = cycleState.charAt(0).toUpperCase() + cycleState.slice(1);
+      const label = STATE_LABELS[cycleState]
+        || (cycleState.charAt(0).toUpperCase() + cycleState.slice(1));
+      this.stateEl.textContent = label;
+      // CSS class stays keyed to the raw (English) state so cycle-widget.css
+      // selectors like .state.day / .state.night keep working untranslated.
       this.stateEl.className = `state ${cycleState}`;
     } catch (err) {
-      this.stateEl.textContent = "Error";
+      this.stateEl.textContent = "Erro";
       this.stateEl.className = "state err";
       // eslint-disable-next-line no-console
-      console.error(`[cycleWidget] failed to refresh ${this.key}:`, err);
+      console.error(`[cycleWidget] falha ao atualizar ${this.key}:`, err);
     }
   }
 

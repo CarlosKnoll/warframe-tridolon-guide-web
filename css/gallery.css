@@ -1,0 +1,52 @@
+/* Reusable image gallery grid: N images side by side, each with a caption below.
+   Follows the same component pattern as cycle-widget.css / nav.css.
+
+   Sizing is customizable via CSS custom properties:
+     --galery-cols   number of columns (default: 3)
+     --galery-ratio  aspect-ratio of each image (default: 1 / 1)
+     --galery-fit    object-fit of each image (default: cover)
+
+   Override per gallery:   <div class="galery" style="--galery-cols: 2;">
+   Override per image:     <img class="galery__img" style="--galery-ratio: 16 / 9;">
+*/
+
+.galery {
+  --galery-cols: 3;
+  --galery-ratio: 1 / 1;
+  --galery-fit: cover;
+
+  display: grid;
+  grid-template-columns: repeat(var(--galery-cols), 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.galery__item {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.galery__img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--galery-ratio);
+  object-fit: var(--galery-fit);
+  border-radius: 8px;
+  background: #1a1a1a; /* placeholder color while real images are missing */
+}
+
+.galery__caption {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Stack to a single column on narrow screens */
+@media (max-width: 640px) {
+  .galery {
+    grid-template-columns: 1fr;
+  }
+}
