@@ -38,6 +38,18 @@
   background: #1a1a1a; /* placeholder color while real images are missing */
 }
 
+/* Video variant: same rounded corners / sizing as .galery__img, but for an
+   <iframe> (YouTube embed) instead of an <img>. NOTE: .galery sets
+   --galery-ratio: 1/1 by default for images, so a video dropped into an
+   existing gallery still needs its own override — see usage examples. */
+.galery__video {
+  width: 100%;
+  aspect-ratio: var(--galery-ratio, 16 / 9);
+  border: 0;
+  border-radius: 8px;
+  background: #1a1a1a;
+}
+
 .galery__caption {
   margin-top: 0.5rem;
   font-weight: 600;
