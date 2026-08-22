@@ -1,6 +1,10 @@
 /* nav.css — top navigation shared by every page */
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
   margin-bottom: var(--space-6);
 }

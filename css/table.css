@@ -24,3 +24,25 @@
 .data-table tbody tr:nth-child(even) {
   background: rgba(255, 255, 255, 0.03);
 }
+
+/* Origin color-coding for rows (e.g. Amp components by vendor/syndicate).
+   Takes precedence over the zebra striping above. */
+.data-table tbody tr.tint-plumes,
+.data-table tbody tr.tint-plumes:nth-child(even) {
+  background: rgba(230, 126, 52, 0.14);
+}
+
+.data-table tbody tr.tint-solaris,
+.data-table tbody tr.tint-solaris:nth-child(even) {
+  background: rgba(79, 156, 224, 0.14);
+}
+
+.data-table--amp th,
+.data-table--amp td {
+  text-align: center;
+}
+
+.data-table--amp td .cell-desc {
+  display: block;
+  text-align: left;
+}
