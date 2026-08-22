@@ -62,3 +62,29 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Collapsible run media (screenshots + video), used on demonstracoes.html.
+   Collapsed by default so a growing run log stays scannable — the stats
+   table above each one stays visible either way. */
+.galery-details {
+  margin: 1rem 0 2rem;
+}
+
+.galery-details > summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 0.4rem 0;
+}
+
+.galery-details[open] > summary {
+  margin-bottom: 0.75rem;
+}
+
+/* The gallery/video inside a details block already carries its own
+   margins; drop the outer ones so opening it doesn't add extra gaps. */
+.galery-details .galery,
+.galery-details > .galery__item {
+  margin-top: 0;
+}
