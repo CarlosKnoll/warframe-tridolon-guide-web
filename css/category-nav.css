@@ -1,0 +1,39 @@
+/* category-nav.css — top-level Eidolons / Orb-Mothers switcher,
+   sits above the existing branch sub-nav (see nav.css) */
+
+.category-nav {
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.category-nav__list {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: var(--space-2) 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+}
+
+.category-nav__link {
+  display: inline-block;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.category-nav__link:hover {
+  background: var(--panel-alt);
+  color: var(--text);
+}
+
+.category-nav__link[aria-current="true"] {
+  background: var(--bg);
+  color: var(--accent);
+}
