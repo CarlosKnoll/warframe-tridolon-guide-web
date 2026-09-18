@@ -33,17 +33,17 @@ const BRANCHES = {
       { key: "demonstracoes", label: "Demonstrações", path: "profit-taker/paginas/demonstracoes.html" },
     ],
   },
-  // "exploiter-orb": {
-  //   label: "Guia da Usurpadora",
-  //   switcherLabel: "Usurpadora",
-  //   pages: [
-  //     { key: "inicio", label: "Início", path: "exploiter-orb/index.html" },
-  //     { key: "como-funciona", label: "Como funciona?", path: "exploiter-orb/paginas/como-funciona.html" },
-  //     { key: "equipamentos", label: "Equipamentos", path: "exploiter-orb/paginas/equipamentos.html" },
-  //     { key: "modo-iniciante", label: "Modo Iniciante", path: "exploiter-orb/paginas/modo-iniciante.html" },
-  //     { key: "demonstracoes", label: "Demonstrações", path: "exploiter-orb/paginas/demonstracoes.html" },
-  //   ],
-  // },
+  "exploiter-orb": {
+    label: "Guia da Usurpadora",
+    switcherLabel: "Usurpadora",
+    pages: [
+      { key: "inicio", label: "Início", path: "exploiter-orb/index.html" },
+      { key: "como-funciona", label: "Como funciona?", path: "exploiter-orb/paginas/como-funciona.html" },
+      { key: "equipamentos", label: "Equipamentos", path: "exploiter-orb/paginas/equipamentos.html" },
+      { key: "modo-iniciante", label: "Modo Iniciante", path: "exploiter-orb/paginas/modo-iniciante.html" },
+      { key: "demonstracoes", label: "Demonstrações", path: "exploiter-orb/paginas/demonstracoes.html" },
+    ],
+  },
 };
 
 export function initSiteNav(selector = "#site-nav") {
