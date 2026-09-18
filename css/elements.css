@@ -1,0 +1,68 @@
+/* =========================================================
+   elements.css
+   Warframe damage/status element colors
+   ========================================================= */
+
+:root {
+  /* Physical damage types */
+  --dmg-impact:    #80C4C4;
+  --dmg-puncture:  #C6B098;
+  --dmg-slash:     #E69CA0;
+
+  /* Elemental damage types */
+  --dmg-toxic:     #00CC22;
+  --dmg-cold:      #5BBCEC;
+  --dmg-heat:      #FB9733;
+  --dmg-electric:  #B37FE7;
+
+  /* Combined elemental damage types */
+  --dmg-viral:     #F093B9;
+  --dmg-gas:       #00CC66;
+  --dmg-corrosive: #93C203;
+  --dmg-magnetic:  #9797E6;
+  --dmg-radiation: #CEAC49;
+  --dmg-blast:     #DD704E;
+
+  /* Special / faction damage types */
+  --dmg-void:      #15C8AB;
+  --dmg-tau:       #F06666;
+  --dmg-true:      #DDA700;
+}
+
+.dmg-impact    { color: var(--dmg-impact); }
+.dmg-puncture  { color: var(--dmg-puncture); }
+.dmg-slash     { color: var(--dmg-slash); }
+
+.dmg-toxic     { color: var(--dmg-toxic); }
+.dmg-cold      { color: var(--dmg-cold); }
+.dmg-heat      { color: var(--dmg-heat); }
+.dmg-electric  { color: var(--dmg-electric); }
+
+.dmg-viral     { color: var(--dmg-viral); }
+.dmg-gas       { color: var(--dmg-gas); }
+.dmg-corrosive { color: var(--dmg-corrosive); }
+.dmg-magnetic  { color: var(--dmg-magnetic); }
+.dmg-radiation { color: var(--dmg-radiation); }
+.dmg-blast     { color: var(--dmg-blast); }
+
+.dmg-void      { color: var(--dmg-void); }
+.dmg-tau       { color: var(--dmg-tau); }
+.dmg-true      { color: var(--dmg-true); }
+
+.dmg-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  white-space: nowrap; /* keeps icon+text from splitting across a line wrap */
+}
+
+.dmg-icon {
+  display: inline;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  vertical-align: -0.35em;
+}

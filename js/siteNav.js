@@ -16,10 +16,10 @@ const BRANCHES = {
     switcherLabel: "Eidolons",
     pages: [
       { key: "inicio", label: "Início", path: "index.html" },
-      { key: "como-funciona", label: "Como funciona?", path: "paginas/como-funciona.html" },
-      { key: "equipamentos", label: "Equipamentos", path: "paginas/equipamentos.html" },
-      { key: "modo-iniciante", label: "Modo Iniciante", path: "paginas/modo-iniciante.html" },
-      { key: "demonstracoes", label: "Demonstrações", path: "paginas/demonstracoes.html" },
+      { key: "como-funciona", label: "Como funciona?", path: "eidolons/como-funciona.html" },
+      { key: "equipamentos", label: "Equipamentos", path: "eidolons/equipamentos.html" },
+      { key: "modo-iniciante", label: "Modo Iniciante", path: "eidolons/modo-iniciante.html" },
+      { key: "demonstracoes", label: "Demonstrações", path: "eidolons/demonstracoes.html" },
     ],
   },
   "profit-taker": {
@@ -33,7 +33,7 @@ const BRANCHES = {
       { key: "demonstracoes", label: "Demonstrações", path: "profit-taker/paginas/demonstracoes.html" },
     ],
   },
-  //   "exploiter-orb": {
+  // "exploiter-orb": {
   //   label: "Guia da Usurpadora",
   //   switcherLabel: "Usurpadora",
   //   pages: [
